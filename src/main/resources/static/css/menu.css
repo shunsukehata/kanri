@@ -1,0 +1,387 @@
+.bg_pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: -1;
+}
+.Paper_v2 {
+  background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 25px,
+      rgb(211, 211, 211) 26px,
+      rgb(211, 211, 211) 26px,
+      transparent 27px,
+      transparent 51px,
+      rgb(211, 211, 211) 52px,
+      rgb(211, 211, 211) 52px,
+      transparent 53px,
+      transparent 77px,
+      rgb(211, 211, 211) 78px,
+      rgb(211, 211, 211) 78px,
+      transparent 79px,
+      transparent 103px,
+      rgb(211, 211, 211) 104px,
+      rgb(211, 211, 211) 104px,
+      transparent 105px,
+      transparent 129px,
+      rgb(211, 211, 211) 130px,
+      rgb(211, 211, 211) 130px
+    ),
+    repeating-linear-gradient(
+      to right,
+      transparent 25px,
+      rgb(211, 211, 211) 26px,
+      rgb(211, 211, 211) 26px,
+      transparent 27px,
+      transparent 51px,
+      rgb(211, 211, 211) 52px,
+      rgb(211, 211, 211) 52px,
+      transparent 53px,
+      transparent 77px,
+      rgb(211, 211, 211) 78px,
+      rgb(211, 211, 211) 78px,
+      transparent 79px,
+      transparent 103px,
+      rgb(211, 211, 211) 104px,
+      rgb(211, 211, 211) 104px,
+      transparent 105px,
+      transparent 129px,
+      rgb(211, 211, 211) 130px,
+      rgb(211, 211, 211) 130px
+    );
+}
+
+/*=============
+base
+==============*/
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/*ヘッダー*/
+
+.menu {
+  font-size: 30px;
+  font-weight: bolder;
+  color: black;
+  padding-top: 35px;
+  padding-left: 130px;
+  letter-spacing: 10px;
+  font-family: "Nico Moji";
+}
+
+header {
+  width: 100%;
+  height: 85px;
+  background-color: #b0c4de;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  max-width: 1024px;
+  height: 50px;
+  font-size: 1.2em;
+}
+
+button {
+  -webkit-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -moz-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -ms-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  display: block;
+  max-width: 180px;
+  border-radius: 4px;
+  padding: 20px 30px;
+}
+
+.header-button {
+  color: rgba(30, 22, 54, 0.6);
+  font-family: "M PLUS Rounded 1c";
+  font-size: 18px;
+  font-weight: bold;
+  width: 155px;
+  height: 45px;
+  padding-top: 8px;
+  background: none;
+  margin-left: -175px;
+  margin-top: 1px;
+  border: 2px solid;
+  border-color: rgba(30, 22, 54, 0.4);
+}
+
+.header-logout {
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  margin-top: -5px;
+  padding-left: 210px;
+  position: absolute;
+}
+
+button:hover {
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+  border-color: rgba(30, 22, 54, 0.6);
+}
+
+.wrap {
+  text-align: center;
+  margin-top: -84px;
+  font-family: "M PLUS Rounded 1c";
+  display: inline-block;
+}
+
+a {
+  -webkit-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -moz-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -ms-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  display: block;
+  margin: 20px auto;
+  max-width: 180px;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 20px 30px;
+}
+
+a.button-home {
+  color: rgba(30, 22, 54, 0.6);
+  box-shadow: rgb(30 22 54 / 40%) 0 0px 0px 2px inset;
+  /* float: left; */
+  font-family: "M PLUS Rounded 1c";
+  font-size: 18px;
+  font-weight: bold;
+  /* margin-bottom: -2px; */
+  margin-top: 140px;
+  margin-left: 400px;
+  width: 108px;
+  height: 15px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+a.button-home:hover {
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}
+
+a.button-menu {
+  margin-top: -65px;
+  color: rgba(30, 22, 54, 0.6);
+  box-shadow: rgb(30 22 54 / 40%) 0 0px 0px 2px inset;
+  /* float: right; */
+  font-family: "M PLUS Rounded 1c";
+  font-size: 18px;
+  font-weight: bold;
+  /* margin-left: 40px; */
+  /* margin-right: -179px; */
+  padding-top: 10px;
+  padding-bottom: 20px;
+  width: 108px;
+  height: 15px;
+}
+
+a.button-menu:hover {
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}
+
+/*ここまでがヘッダー↑*/
+
+main .form {
+  background: #ffffff;
+  width: 600px;
+  height: 300px;
+  padding: 60px;
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
+  margin-top: 4%;
+  margin-left: 450px;
+  margin-bottom: 2%;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.text2 {
+  font-family: "M PLUS Rounded 1c";
+  padding-top: 12px;
+  font-size: 18px;
+  background-color: #dddddd;
+  margin-top: -21px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.textarea {
+  margin-left: 75px;
+  margin-top: 48px;
+  position: absolute;
+}
+
+.employee-insert {
+  color: rgba(30, 22, 54, 0.6);
+  background-color: #b0c4de;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 27px;
+  width: 150px;
+  display: block;
+  padding-top: 20px;
+  margin-left: 30px;
+  margin-top: 50px;
+  border-radius: 8px;
+  border: solid;
+}
+
+.employee-insert:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/twotone_check_circle_outline_black_24dp.png")
+    no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.employee-insert:hover {
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}
+
+.employee-update {
+  color: rgba(30, 22, 54, 0.6);
+  background-color: #b0c4de;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 27px;
+  width: 150px;
+  display: block;
+  padding-top: 20px;
+  margin-left: 30px;
+  margin-top: 50px;
+  border-radius: 8px;
+  border: solid;
+}
+
+.employee-update:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/twotone_settings_suggest_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.employee-update:hover {
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}
+
+.employee-delete {
+  color: rgba(30, 22, 54, 0.6);
+  background-color: #b0c4de;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 27px;
+  width: 150px;
+  display: block;
+  padding-top: 20px;
+  margin-left: 30px;
+  margin-top: 50px;
+  border-radius: 8px;
+  border: solid;
+}
+
+.employee-delete:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/twotone_delete_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.employee-delete:hover {
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+/*フッター*/
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #b0c4de;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+p {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bolder;
+  color: black;
+  padding-top: 8px;
+}
+
+/*ニュース天気CSS*/
+
+.booked-weather-custom-160 {
+  background: #98d2fd;
+  border-radius: 6px;
+  width: 180px;
+  color: #000;
+  font: 11px Arial, sans-serif;
+  text-align: center;
+  padding-bottom: 2px;
+  margin-left: 127px;
+  margin-top: 168px;
+  position: absolute;
+}
+
+.color-009fde {
+  background: #009fde;
+}
+
+/* Google Fonts 読み込み */
+
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+/* 時計の共通スタイル */
+
+/* 時計の共通スタイル */
+#Clock1 {
+  margin-left: 143px;
+  margin-top: 30px;
+  position: absolute;
+  font-size: 20px;
+  font-family: "M PLUS Rounded 1c";
+  border: 2px solid #009fde;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+}

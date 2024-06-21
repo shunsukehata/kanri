@@ -1,0 +1,185 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background: #f0f8ff;
+    background: -webkit-linear-gradient(right, #f0f8ff, #f5f5f5);
+    background: -moz-linear-gradient(right, #f0f8ff, #f5f5f5);
+    background: -o-linear-gradient(right, #f0f8ff, #f5f5f5);
+    background: linear-gradient(to left, #f0f8ff, #f5f5f5);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    width: 100%;
+    height: 120px;
+    background-color: #add8e6;
+}
+
+.sample2 {
+    padding-top: 30px;
+    float: right;
+    font-family: "M PLUS Rounded 1c";
+    letter-spacing: 5px;
+    margin-right: 50px;
+    font-size: 13px;
+    color: red;
+}
+
+.sample {
+    font-size: 30px;
+    font-weight: bolder;
+    color: black;
+    padding-top: 40px;
+    padding-left: 69px;
+    letter-spacing: 10px;
+    font-family: "Nico Moji";
+    margin-right: 50px;
+}
+
+p {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    text-align: center;
+    /* font-size: 12px; */
+    font-weight: bolder;
+    color: black;
+    padding-top: 15px;
+    font-size: 10px;
+}
+
+main {
+    text-align: center;
+    padding-bottom: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: "M PLUS Rounded 1c";
+}
+
+main .form {
+    background: #ffffff;
+    width: 750px;
+    height: 380px;
+    padding: 60px;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
+    margin-top: 5%;
+    margin-bottom: -2%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: #add8e6;
+    font-size: 20px;
+    position: absolute;
+    /*←絶対位置*/
+}
+
+.select-form {
+    border: 5px solid #5f9ea0;
+    border-radius: 5px;
+    padding: 25px 10px 75px 10px;
+    position: relative;
+    z-index: 0;
+    height: 250px;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6.5%;
+    margin-bottom: 6.5%;
+    background-color: white;
+    font-weight: bold;
+}
+
+.text {
+    font-family: system-ui, sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 10px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    font-size: large;
+}
+
+.input-box {
+    background: #fff;
+    border: none;
+    border-bottom: 2px solid #87cefa;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.input-box:focus {
+    border-bottom: 2px solid #00a4a7;
+    outline: none;
+}
+
+.list {
+    padding: 15px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: dotted;
+    border-color: gray;
+    border-width: 2px;
+    padding-top: 0px;
+    margin-bottom: 15px;
+}
+
+a.btn-back {
+    color: #ffffff;
+    background: #87cefa;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-family: "M PLUS Rounded 1c";
+    height: 40px;
+    width: 100px;
+    display: block;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+a.btn-back:after {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: -3px 0 0 5px;
+    background: url("../img/baseline_done_black_24dp.png") no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+a.btn-back:hover {
+    background: #00ced1;
+}
+
+.sample3 {
+    font-family: system-ui, sans-serif;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bolder;
+    color: black;
+}

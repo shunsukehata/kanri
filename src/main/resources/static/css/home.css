@@ -1,0 +1,475 @@
+body {
+  margin: 0;
+  height: 100%;
+  background: #f0f8ff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  background-image: radial-gradient(
+      290px 300px,
+      rgba(123, 222, 217, 0.5) 20%,
+      transparent 20%
+    ),
+    radial-gradient(800px 780px, rgba(123, 222, 217, 0.5) 20%, transparent 20%),
+    radial-gradient(1000px 990px, rgba(123, 222, 217, 0.5) 20%, transparent 20%),
+    radial-gradient(400px 380px, rgba(123, 222, 217, 0.5) 20%, transparent 20%),
+    radial-gradient(750px 750px, rgba(123, 222, 217, 0.5) 20%, transparent 20%),
+    radial-gradient(100px 100px, rgba(123, 222, 217, 0.5) 20%, transparent 20%);
+  background-size: 1230px 1280px, 810px 910px, 1470px 990px, 1200px 1700px,
+    1520px 1200px, 1100px 1300px;
+  background-position: -300px -550px, -200px 100px, 50px 510px, -200px -550px,
+    -180px -250px, 130px -150px;
+}
+#Clock1 {
+  margin-left: 1000px;
+  margin-top: -260px;
+  position: absolute;
+  font-size: 20px;
+  font-family: "M PLUS Rounded 1c";
+  border: 2px solid #009fde;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.role {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  padding: 3px;
+  float: left;
+  background-color: white;
+  position: absolute;
+  top: 80px;
+  z-index: 2;
+  margin-left: 200px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.role:hover {
+  background: #00ced1;
+}
+
+a.role {
+  color: white;
+  background-color: #87cefa;
+  border-bottom: 0px solid white;
+  text-decoration: none;
+  font-family: "M PLUS Rounded 1c";
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 125px;
+  margin-top: -10px;
+}
+
+header {
+  width: 100%;
+  height: 120px;
+  background-color: #add8e6;
+  position: fixed;
+}
+
+.header-box {
+  background: #ffffff;
+  margin-top: 68px;
+  margin-left: 170px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  max-width: 1024px;
+  height: 50px;
+  font-size: 1.2em;
+}
+
+.header-button {
+  background: white;
+  color: #4169e1;
+  font-family: "Roboto", sans-serif;
+  border: 0;
+  margin-right: -300px;
+  margin-left: 324px;
+  color: black;
+  background-color: #87cefa;
+  border-bottom: 0px solid white;
+}
+
+.header-logout {
+  color: white;
+  padding: 4px;
+  margin-top: 70px;
+  float: right;
+  font-size: 20px;
+  font-family: "M PLUS Rounded 1c";
+  font-weight: bold;
+  width: 110px;
+  margin-bottom: 6px;
+}
+
+button:hover {
+  background: #00ced1;
+}
+
+.menu {
+  font-size: 30px;
+  font-weight: bolder;
+  color: black;
+  padding-top: 60px;
+  padding-left: 69px;
+  letter-spacing: 10px;
+  font-family: "Nico Moji";
+}
+
+p {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bolder;
+  color: black;
+  padding-top: 8px;
+}
+
+main .form {
+  background: #ffffff;
+  width: 750px;
+  height: 280px;
+  padding: 60px;
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
+  margin-bottom: 35px;
+  margin-left: 40px;
+  font-family: "M PLUS Rounded 1c";
+}
+
+a.btn-insert {
+  color: #ffffff;
+  background: #87cefa;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 40px;
+  width: 170px;
+  display: block;
+  padding-top: 10px;
+  margin-left: auto;
+  font-size: 1.2em;
+  margin-top: 25px;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+a.btn-insert:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/baseline_done_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-insert:hover {
+  background: #00ced1;
+}
+
+a.btn-main {
+  color: #ffffff;
+  background: #87cefa;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 30px;
+  width: 230px;
+  display: block;
+  padding-top: 5px;
+}
+
+a.btn-main:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/baseline_home_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-main:hover {
+  background: #00ced1;
+}
+
+a.btn-todo {
+  color: #ffffff;
+  background: #87cefa;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 30px;
+  width: 230px;
+  display: block;
+  padding-top: 5px;
+}
+
+a.btn-todo:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/baseline_get_app_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-todo:hover {
+  background: #00ced1;
+}
+
+a.btn-select {
+  color: #ffffff;
+  background: #87cefa;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 30px;
+  width: 230px;
+  display: block;
+  padding-top: 5px;
+}
+
+a.btn-select:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/baseline_search_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-select:hover {
+  background: #00ced1;
+}
+
+a.btn-emergencyContact {
+  color: #ffffff;
+  background: #87cefa;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 30px;
+  width: 230px;
+  display: block;
+  padding-top: 5px;
+}
+
+a.btn-emergencyContact:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/baseline_phone_in_talk_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-emergencyContact:hover {
+  background: #00ced1;
+}
+
+main {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/*ヘッダーの記述上↑*/
+
+/*ニュース天気CSS*/
+
+.booked-weather-custom-160 {
+  background: #98d2fd;
+  border-radius: 6px;
+  width: 180px;
+  color: #000;
+  font: 11px Arial, sans-serif;
+  text-align: center;
+  padding-bottom: 2px;
+  margin-left: 960px;
+  margin-top: -205px;
+  position: relative;
+}
+
+.color-009fde {
+  background: #009fde;
+}
+
+/* 時計の共通スタイル */
+
+.clock {
+  color: #daf6ff;
+  line-height: 1.2;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  margin-top: -5px;
+}
+
+.container {
+  color: #5989cf;
+  border: solid 3px #6091d3;
+  border-radius: 10px;
+  width: 250px;
+  height: 135px;
+  margin-left: 1015px;
+  margin-top: -400px;
+  margin-bottom: 116px;
+  position: absolute;
+  text-align: center;
+  background: white;
+}
+
+/* 日付のスタイル */
+
+.clock-date {
+  font-size: 20px;
+}
+
+/* 時間のスタイル */
+
+.clock-time {
+  font-size: 20px;
+}
+
+/* 文字サイズ調整 */
+
+@media screen and (max-width: 500px) {
+  .clock-date {
+    font-size: 5vw;
+  }
+  .clock-time {
+    font-size: 20vw;
+  }
+}
+
+/*表  */
+
+.select-teble {
+  text-align: center;
+  border: blue;
+  border-width: 300px;
+  padding: 500px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 450px;
+  background-color: #fff;
+  width: 300px;
+  font-family: "M PLUS Rounded 1c";
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.select-teble tr {
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+.select-teble tr:hover {
+  background-color: #d4f0fd;
+}
+
+.select-teble th,
+.select-teble td {
+  text-align: center;
+  width: 20%;
+  padding: 15px 0px;
+}
+
+.select-teble td.icon {
+  background-size: 35px;
+  background-position: left 5px center;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+
+.select-form {
+  border: blue;
+  margin-top: 50px;
+  margin-bottom: 75px;
+}
+
+caption {
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.select-teble {
+  border-collapse: collapse;
+  border-radius: 15px;
+  font-family: "M PLUS Rounded 1c";
+}
+
+table tr:nth-child(odd) {
+  border-radius: 150px;
+  background-color: #eee;
+}
+
+.select-teble {
+  border: 2px solid #5f9ea0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 6px;
+  width: 450px;
+  position: relative;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.footer1 {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bolder;
+  color: black;
+  padding-top: 8px;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #add8e6;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+.booked-weather-custom-160-city {
+    border-bottom: 1px solid #AAD1FB;
+    color: #08488D !important;
+    font-size: 13px;
+    overflow: hidden;
+    height: 16px;
+    margin: 0px 0 2px;
+    box-sizing: content-box !important;
+    padding: 2px 0 3px;
+    text-decoration: none;
+    /* display: block; */
+    background: #f1f8ff;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    box-shadow: none !important;
+    padding-right: 170px;
+    text-align: center;

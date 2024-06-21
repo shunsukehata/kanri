@@ -1,0 +1,642 @@
+.bg_pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: -1;
+}
+.Paper_v2 {
+  background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 25px,
+      rgb(211, 211, 211) 26px,
+      rgb(211, 211, 211) 26px,
+      transparent 27px,
+      transparent 51px,
+      rgb(211, 211, 211) 52px,
+      rgb(211, 211, 211) 52px,
+      transparent 53px,
+      transparent 77px,
+      rgb(211, 211, 211) 78px,
+      rgb(211, 211, 211) 78px,
+      transparent 79px,
+      transparent 103px,
+      rgb(211, 211, 211) 104px,
+      rgb(211, 211, 211) 104px,
+      transparent 105px,
+      transparent 129px,
+      rgb(211, 211, 211) 130px,
+      rgb(211, 211, 211) 130px
+    ),
+    repeating-linear-gradient(
+      to right,
+      transparent 25px,
+      rgb(211, 211, 211) 26px,
+      rgb(211, 211, 211) 26px,
+      transparent 27px,
+      transparent 51px,
+      rgb(211, 211, 211) 52px,
+      rgb(211, 211, 211) 52px,
+      transparent 53px,
+      transparent 77px,
+      rgb(211, 211, 211) 78px,
+      rgb(211, 211, 211) 78px,
+      transparent 79px,
+      transparent 103px,
+      rgb(211, 211, 211) 104px,
+      rgb(211, 211, 211) 104px,
+      transparent 105px,
+      transparent 129px,
+      rgb(211, 211, 211) 130px,
+      rgb(211, 211, 211) 130px
+    );
+}
+
+/*=============
+base
+==============*/
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/*ヘッダー*/
+
+.menu {
+  font-size: 30px;
+  font-weight: bolder;
+  color: black;
+  padding-top: 35px;
+  padding-left: 130px;
+  letter-spacing: 10px;
+  font-family: "Nico Moji";
+}
+
+header {
+  width: 100%;
+  height: 85px;
+  background-color: #b0c4de;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    max-width: 1024px;
+    height: 50px;
+    font-size: 1.2em;
+}
+
+button {
+  -webkit-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -moz-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -ms-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  display: block;
+  max-width: 180px;
+  border-radius: 4px;
+  padding: 20px 30px;
+}
+
+.header-button {
+    color: rgba(30, 22, 54, 0.6);
+    font-family: "M PLUS Rounded 1c";
+    font-size: 18px;
+    font-weight: bold;
+    width: 155px;
+    height: 45px;
+    padding-top: 8px;
+    background: none;
+    margin-left: -175px;
+    margin-top: 1px;
+    border: 2px solid;
+    border-color: rgba(30, 22, 54, 0.4);
+}
+
+.header-logout {
+    text-align: center;
+    font-family: "M PLUS Rounded 1c";
+    margin-top: -5px;
+    padding-left: 210px;
+    position: absolute;
+}
+
+button:hover {
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+  border-color: rgba(30, 22, 54, 0.6);
+}
+
+.wrap {
+    text-align: center;
+    margin-top: -84px;
+    font-family: "M PLUS Rounded 1c";
+    display: inline-block;
+}
+
+a {
+  -webkit-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -moz-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -ms-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  display: block;
+  margin: 20px auto;
+  max-width: 180px;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 20px 30px;
+}
+
+a.button-home {
+  color: rgba(30, 22, 54, 0.6);
+  box-shadow: rgb(30 22 54 / 40%) 0 0px 0px 2px inset;
+  /* float: left; */
+  font-family: "M PLUS Rounded 1c";
+  font-size: 18px;
+  font-weight: bold;
+  /* margin-bottom: -2px; */
+  margin-top: 140px;
+  margin-left: 400px;
+  width: 108px;
+  height: 15px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+a.button-home:hover {
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}
+
+a.button-menu {
+  margin-top: -65px;
+  color: rgba(30, 22, 54, 0.6);
+  box-shadow: rgb(30 22 54 / 40%) 0 0px 0px 2px inset;
+  /* float: right; */
+  font-family: "M PLUS Rounded 1c";
+  font-size: 18px;
+  font-weight: bold;
+  /* margin-left: 40px; */
+  /* margin-right: -179px; */
+  padding-top: 10px;
+  padding-bottom: 20px;
+  width: 108px;
+  height: 15px;
+}
+
+a.button-menu:hover {
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}
+
+/*ここまでがヘッダー↑*/
+
+
+a.btn-main {
+  color: #ffffff;
+  background: #4682b4;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 30px;
+  width: 230px;
+  display: block;
+  padding-top: 5px;
+}
+
+a.btn-main:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/twotone_home_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-main:hover {
+  background: #4169e1;
+}
+
+a.btn-todo {
+  color: #ffffff;
+  background: #4682b4;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 30px;
+  width: 230px;
+  display: block;
+  padding-top: 5px;
+}
+
+a.btn-todo:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/twotone_check_circle_outline_black_24dp.png")
+    no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-todo:hover {
+  background: #4169e1;
+}
+
+a.btn-select {
+  color: #ffffff;
+  background: #4682b4;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 30px;
+  width: 230px;
+  display: block;
+  padding-top: 5px;
+}
+
+a.btn-select:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/twotone_person_search_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-select:hover {
+  background: #4169e1;
+}
+
+a.btn-emergencyContact {
+  color: #ffffff;
+  background: #4682b4;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 30px;
+  width: 230px;
+  display: block;
+  padding-top: 5px;
+}
+
+a.btn-emergencyContact:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/twotone_phone_in_talk_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-emergencyContact:hover {
+  background: #4169e1;
+}
+
+/*フッター*/
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #b0c4de;
+  font-size: 20px;
+  position: absolute;
+  /*←絶対位置*/
+}
+
+p {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bolder;
+  color: black;
+  padding-top: 8px;
+}
+
+.select-form {
+  border: 5px solid #5f9ea0;
+  border-radius: 5px;
+  padding: 25px 20px 75px 20px;
+  position: relative;
+  z-index: 0;
+  height: 1000px;
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  background-color: white;
+  font-weight: bold;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.texta {
+  font-family: "M PLUS Rounded 1c";
+  font-size: 1.2rem;
+  color: black;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 19%;
+}
+
+p {
+  font-size: 25px;
+  padding-bottom: 20px;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.input-box {
+  background: #fff;
+  border: none;
+  border-bottom: 2px solid #87cefa;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  transition: border-color 0.3s;
+  width: 350px;
+}
+
+.input-box:focus {
+  border-bottom: 2px solid #7a7a7a;
+  outline: none;
+}
+
+label {
+  font-size: 16.5px;
+}
+
+/*フッター*/
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #b0c4de;
+  font-size: 20px;
+  position: absolute;
+
+  /*←絶対位置*/
+}
+
+footer p {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bolder;
+  color: black;
+  padding-top: 8px;
+}
+
+/*プルダウン*/
+
+/* CodePen demo */
+
+.big {
+  font-size: 1.2em;
+}
+
+.square {
+  width: 0.7em;
+  height: 0.7em;
+  margin: 0.5em;
+  display: inline-block;
+}
+
+/* Custom dropdown */
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 105px;
+}
+
+.custom-dropdown select {
+  background: #4682b4;
+  color: #fff;
+  font-size: 16.5px;
+  padding: 0.5em;
+  padding-right: 2.5em;
+  border: 0;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: "";
+  -webkit-appearance: button;
+  /* hide default arrow in chrome OSX */
+}
+
+.custom-dropdown::before {
+  /*  Custom dropdown arrow cover */
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.custom-dropdown select[disabled] {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.custom-dropdown select[disabled]::after {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-dropdown::before {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.custom-dropdown::after {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.Role {
+  margin-left: 105px;
+  font-family: "M PLUS Rounded 1c";
+  margin-bottom: -20px;
+}
+
+.Gender {
+  margin-left: 105px;
+  font-family: "M PLUS Rounded 1c";
+  margin-bottom: -20px;
+  margin-top: 20px;
+}
+
+.Birthday {
+  margin-left: 105px;
+  font-family: "M PLUS Rounded 1c";
+  margin-bottom: -30px;
+  margin-top: 20px;
+}
+
+/* 生年月日 */
+
+.birthday {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 36px;
+  border: 2px solid #87cefa;
+  border-radius: 3px;
+}
+
+input[type="date"] {
+  position: relative;
+  padding: 0 10px;
+  width: 200px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #999;
+}
+
+.btn {
+  color: #ffffff;
+  background: #4682b4;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 50px;
+  width: 120px;
+  display: block;
+  padding-top: 5px;
+  margin-top: 40px;
+  margin-left: 225px;
+  border: #fff;
+  padding: 10px 10px 30px 10px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.btn:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/baseline_done_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.btn:hover {
+  background: #4169e1;
+}
+
+.p-err {
+    margin-top: -30px;
+    margin-bottom: 0px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: red;
+    margin-left: 15px;
+}
+
+.error {
+  margin-top: -30px;
+  margin-bottom: -10px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: red;
+  margin-left: 190px;
+}
+
+.p-err1 {
+  margin-top: -30px;
+  margin-bottom: 0px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: red;
+  margin-left: 204px;
+}
+
+.p-err2 {
+  margin-top: -30px;
+  margin-bottom: 0px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: red;
+  margin-left: 150px;
+}
+
+.p-err3 {
+  margin-top: -30px;
+  margin-bottom: 0px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: red;
+  margin-left: 112px;
+}
+
+.p-err4 {
+  margin-top: -30px;
+  margin-bottom: 0px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: red;
+  margin-left: 150px;
+}
+.p-err5 {
+  margin-top: -30px;
+  margin-bottom: 0px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: red;
+  margin-left: 59px;
+}
+
+.p-err6 {
+  margin-top: -30px;
+  margin-bottom: 0px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: red;
+  margin-left: 115px;
+}
+.p-err7 {
+  margin-top: -30px;
+  margin-bottom: 0px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: red;
+  margin-left: 68px;
+}
+
+.p-err8 {
+  margin-top: -30px;
+  margin-bottom: 0px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: red;
+  margin-left: 78px;
+}
+.p-err9 {
+  margin-top: -30px;
+  margin-bottom: 0px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: red;
+  margin-left: 78px;
+}

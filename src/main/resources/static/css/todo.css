@@ -1,0 +1,393 @@
+body {
+  margin: 0;
+  height: 100%;
+  background: #f0f8ff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  background-image: radial-gradient(
+      290px 300px,
+      rgba(123, 222, 217, 0.5) 20%,
+      transparent 20%
+    ),
+    radial-gradient(800px 780px, rgba(123, 222, 217, 0.5) 20%, transparent 20%),
+    radial-gradient(1000px 990px, rgba(123, 222, 217, 0.5) 20%, transparent 20%),
+    radial-gradient(400px 380px, rgba(123, 222, 217, 0.5) 20%, transparent 20%),
+    radial-gradient(750px 750px, rgba(123, 222, 217, 0.5) 20%, transparent 20%),
+    radial-gradient(100px 100px, rgba(123, 222, 217, 0.5) 20%, transparent 20%);
+  background-size: 1230px 1280px, 810px 910px, 1470px 990px, 1200px 1700px,
+    1520px 1200px, 1100px 1300px;
+  background-position: -300px -550px, -200px 100px, 50px 510px, -200px -550px,
+    -180px -250px, 130px -150px;
+}
+
+.role {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  padding: 3px;
+  float: left;
+  background-color: white;
+  position: absolute;
+  top: 80px;
+  z-index: 2;
+  margin-left: 200px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.role:hover {
+  background: #00ced1;
+}
+
+a.role {
+  color: white;
+  background-color: #87cefa;
+  border-bottom: 0px solid white;
+  text-decoration: none;
+  font-family: "M PLUS Rounded 1c";
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 120px;
+  /* margin-bottom: -16px; */
+  margin-top: -9px;
+}
+
+header {
+  width: 100%;
+  height: 120px;
+  background-color: #add8e6;
+}
+
+.header-box {
+  background: #ffffff;
+  margin-top: 68px;
+  margin-left: 170px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  max-width: 1024px;
+  height: 50px;
+  font-size: 1.2em;
+}
+
+.header-button {
+  background: white;
+  color: #4169e1;
+  font-family: "Roboto", sans-serif;
+  border: 0;
+  margin-right: -300px;
+  margin-left: 324px;
+  color: black;
+  background-color: #87cefa;
+  border-bottom: 0px solid white;
+  outline: none;
+}
+
+.header-logout {
+  color: white;
+  padding: 4px;
+  margin-top: 70px;
+  float: right;
+  font-size: 20px;
+  font-family: "M PLUS Rounded 1c";
+  font-weight: bold;
+  width: 110px;
+  margin-bottom: 6px;
+  outline: none;
+}
+
+button:hover {
+  background: #00ced1;
+  outline: none;
+}
+
+.menu {
+  font-size: 30px;
+  font-weight: bolder;
+  color: black;
+  padding-top: 60px;
+  padding-left: 69px;
+  letter-spacing: 10px;
+  font-family: "Nico Moji";
+}
+
+p {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bolder;
+  color: black;
+  padding-top: 15px;
+}
+
+main .form {
+  background: #ffffff;
+  width: 750px;
+  height: 300px;
+  padding: 60px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 40px;
+}
+
+a.btn-insert {
+  color: #ffffff;
+  background: #87cefa;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 30px;
+  width: 150px;
+  display: block;
+  padding-top: 5px;
+  margin-left: 560px;
+  font-size: 1.2em;
+  margin-top: 270px;
+}
+
+a.btn-insert:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/baseline_done_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-insert:hover {
+  background: #00ced1;
+}
+
+a.btn-main {
+  color: #ffffff;
+  background: #87cefa;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 35px;
+  display: block;
+  padding-top: 5px;
+  margin-bottom: 1px;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-right: 1px;
+}
+
+a.btn-main:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/baseline_home_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-main:hover {
+  background: #00ced1;
+}
+
+a.btn-todo {
+  color: #ffffff;
+  background: #87cefa;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 35px;
+  width: 230px;
+  display: block;
+  padding-top: 5px;
+  margin-top: 2px;
+  margin-right: 2px;
+  margin-left: 1px;
+  margin-bottom: 1px;
+}
+
+a.btn-todo:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/baseline_get_app_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-todo:hover {
+  background: #00ced1;
+}
+
+a.btn-select {
+  color: #ffffff;
+  background: #87cefa;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c";
+  height: 35px;
+  width: 230px;
+  display: block;
+  padding-top: 5px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 1px;
+  margin-top: 1px;
+}
+
+a.btn-select:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/baseline_search_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-select:hover {
+  background: #00ced1;
+}
+
+a.btn-emergencyContact {
+  color: #ffffff;
+  background: #87cefa;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  height: 35px;
+  width: 230px;
+  display: block;
+  padding-top: 5px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+a.btn-emergencyContact:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  background: url("../img/baseline_phone_in_talk_black_24dp.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.btn-emergencyContact:hover {
+  background: #00ced1;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #add8e6;
+  font-size: 20px;
+  margin-top: 210px;
+}
+
+.container-fluid {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.bg-dark {
+  background-color: #343a40 !important;
+}
+
+.col-xl-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  margin-bottom: -55px;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 5px;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.sticky-top {
+  position: sticky;
+  /* top: 15px; */
+  /* z-index: 1020; */
+  font-size: 15px;
+  width: 255px;
+  /* padding-bottom: 0px; */
+}
+
+.col-xl-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+  margin-left: 300px;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.table-bordered td,
+.table-bordered th {
+  border: 1px solid #e9ecef;
+}
+
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  /* font-family: "Roboto", sans-serif; */
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 5px;
+  font-family: "M PLUS Rounded 1c";
+  font-size: 20px;
+}
+
+.alert {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 2px solid #6495ed;
+  border-radius: 0.25rem;
+}
+
+.w-100 {
+  width: 100% !important;
+  background: white;
+}
+
+.mb-md-5 {
+  background: white;
+  margin-bottom: 3rem !important;
+}
