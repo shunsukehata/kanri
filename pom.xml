@@ -8,7 +8,7 @@
 		<version>2.5.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>jp.co.axiz.kanri</groupId>
+	<groupId>jp.co.kanri</groupId>
 	<artifactId>kanrichan</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging> <!-- ここを jar に変更 -->
@@ -90,12 +90,25 @@
 	</dependencies>
 
 	<build>
+		<finalName>kanri</finalName> <!--追加-->
 		<plugins>
+			<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<configuration>
+				<excludes>
+					<exclude>
+						<groupId>org.projectlombok</groupId>
+						<artifactId>lombok</artifactId>
+					</exclude>
+				</excludes>
+			</configuration>
+			</plugin>
 			<!-- Exec Maven Plugin to manage Docker Compose -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
-				<version>3.0.0</version>
+				<version>3.3.0</version>
 				<executions>
 					<!-- Start MySQL container -->
 					<execution>
