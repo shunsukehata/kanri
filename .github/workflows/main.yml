@@ -1,32 +1,38 @@
-# Workflowの名前
 name: java mvn test
 
-# Workflowを動かすトリガー（=Event）を指定。
-# 今回はpushをEventに設定
 on:
   - push
 
 jobs:
-  # build job
   build:
-    # Runnerを指定
     runs-on: ubuntu-latest
-    # Step
+    services:
+      mysql:
+        image: mysql:8.0
+        ports:
+          - 3306:3306
+        env:
+          MYSQL_ROOT_PASSWORD: rootroot
+          MYSQL_DATABASE: kanrichan
+          MYSQL_USER: shunuser
+          MYSQL_PASSWORD: mysql0710
+        options: --health-cmd="mysqladmin ping -h localhost" --health-interval=10s --health-timeout=5s --health-retries=3
+
     steps:
-      # RunnnerにGitリポジトリのコピーをダウンロード
-      - uses: actions/checkout@v3
-      # Java 11をセットアップ
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Set up JDK 11
         uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
-      # maven build
+
       - name: Build with Maven
-        run: mvn clean package
-        working-directory: ./kanri
-      # Test実行
+        run: mvn clean package -DskipTests
+        working-directory: ./
+
       - name: Test with Maven
         run: mvn verify
-        working-directory: ./kanri
+        working-directory: ./
