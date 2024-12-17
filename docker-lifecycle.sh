@@ -24,8 +24,12 @@ case "$1" in
     docker-compose -f $DOCKER_COMPOSE_PATH down
     echo "MySQL container stopped."
     ;;
+  build)
+    echo "Building MySQL container with docker-compose..."
+    docker-compose -f $DOCKER_COMPOSE_PATH build
+    ;;
   *)
-    echo "Usage: $0 {start|stop}"
+    echo "Usage: $0 {start|stop|build}"
     exit 1
     ;;
 esac
