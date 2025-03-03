@@ -1,4 +1,4 @@
-name: java mvn test
+name: Java Maven Test with MySQL
 
 on:
   - push
@@ -6,6 +6,22 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        ports:
+          - 3306:3306
+        env:
+          MYSQL_ROOT_PASSWORD: rootroot
+          MYSQL_DATABASE: kanrichan
+          MYSQL_USER: shunuser
+          MYSQL_PASSWORD: mysql0710
+        options: >-
+          --health-cmd="mysqladmin ping --silent"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
 
     steps:
       - name: Checkout code
@@ -17,6 +33,16 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
+
+      - name: Wait for MySQL to be healthy
+        run: |
+          for i in {1..30}; do
+            if docker exec mysql mysql -ushunuser -pmysql0710 -e 'select 1'; then
+              break
+            fi
+            echo "Waiting for MySQL to be healthy..."
+            sleep 2
+          done
 
       - name: Build with Maven
         run: mvn clean package -DskipTests
