@@ -27,13 +27,11 @@ jobs:
       - name: Build and start MySQL container
         run: |
           docker-compose -f compose.yaml up -d --build
-          for i in {1..30}; do
-            if docker-compose -f compose.yaml exec -T kanri_mysql mysql -h kanri_mysql -ushunuser -pmysql0710 -e 'select 1'; then
-              break
-            fi
-            echo "Waiting for MySQL to be ready... ($i)"
-            docker-compose -f compose.yaml logs kanri_mysql
-            sleep 10
+          
+          echo "Waiting for MySQL to be ready..."
+          until docker-compose -f compose.yaml exec -T kanri_mysql mysqladmin ping -hkanri_mysql --silent; do
+            echo "MySQL is not ready yet. Waiting..."
+            sleep 5
           done
 
       - name: Build with Maven
