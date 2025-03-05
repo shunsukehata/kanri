@@ -111,7 +111,7 @@
 				<executions>
 					<execution>
 						<id>docker-compose-up</id>
-						<phase>pre-integration-test</phase>
+						<phase>process-test-classes</phase>
 						<goals>
 							<goal>exec</goal>
 						</goals>

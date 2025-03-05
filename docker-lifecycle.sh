@@ -8,8 +8,8 @@ case "$1" in
     echo "Starting MySQL container with docker-compose..."
     docker-compose -f $DOCKER_COMPOSE_PATH up -d
     echo "Waiting for MySQL to be ready..."
-    for i in {1..30}; do
-      if docker-compose -f $DOCKER_COMPOSE_PATH exec kanri_mysql mysqladmin ping -h 127.0.0.1 --silent; then
+    for i in {1..60}; do  # 待機時間を延長
+      if docker-compose -f $DOCKER_COMPOSE_PATH exec kanri_mysql mysql -ushunuser -pmysql0710 -e 'select 1'; then
         echo "MySQL is ready!"
         exit 0
       fi

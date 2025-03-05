@@ -20,4 +20,4 @@ services:
     healthcheck:
       test: mysql -h 127.0.0.1 -ushunuser -pmysql0710 -e'select user();'
       interval: 10s
-      retries: 5
+      retries: 10
