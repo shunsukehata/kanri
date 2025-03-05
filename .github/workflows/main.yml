@@ -27,9 +27,9 @@ jobs:
           --health-interval=10s
           --health-retries=15
         volumes:
+          - ./docker/mysql/compose-volumes/docker-entrypoint-initdb.d/03_create_user.sql:/docker-entrypoint-initdb.d/03_create_user.sql
           - ./docker/mysql/compose-volumes/docker-entrypoint-initdb.d/01_kanri.sql:/docker-entrypoint-initdb.d/01_kanri.sql
           - ./docker/mysql/compose-volumes/docker-entrypoint-initdb.d/02_kanri_data.sql:/docker-entrypoint-initdb.d/02_kanri_data.sql
-          - ./docker/mysql/compose-volumes/docker-entrypoint-initdb.d/03_create_user.sql:/docker-entrypoint-initdb.d/03_create_user.sql
           - ./docker/mysql/compose-volumes/etc/mysql/conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
 
     steps:
