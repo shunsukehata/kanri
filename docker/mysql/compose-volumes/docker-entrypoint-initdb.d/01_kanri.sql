@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS kanrichan;
-CREATE DATABASE IF NOT EXISTS kanrichan;
+CREATE DATABASE IF NOT EXISTS kanrichan DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+SELECT SLEEP(2);  -- Allow database creation to complete
 USE kanrichan;
 
 -- Create position table
