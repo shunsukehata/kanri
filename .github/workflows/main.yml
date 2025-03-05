@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'  # OpenJDK（Eclipse Temurin）を使用
-          java-version: '17'       # 必要なJavaのバージョンを指定
+          java-version: '11'       # 必要なJavaのバージョンを指定
           cache: 'maven'           # Mavenの依存関係をキャッシュ
 
       - name: Maven Verifyの実行
