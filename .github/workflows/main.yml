@@ -24,7 +24,6 @@ jobs:
           MYSQL_PASSWORD: mysql0710
         options: >-
           --health-cmd="mysqladmin ping -h 127.0.0.1 -ushunuser -pmysql0710 -e'select user();'"
-#          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -prootroot"
           --health-interval=10s
           --health-retries=15
         volumes:
