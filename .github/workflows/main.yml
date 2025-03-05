@@ -33,7 +33,7 @@ jobs:
             fi
             echo "Waiting for MySQL to be ready... ($i)"
             docker-compose -f compose.yaml logs kanri_mysql
-            sleep 2
+            sleep 10
           done
 
       - name: Build with Maven
