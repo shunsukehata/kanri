@@ -7,22 +7,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    services:
-      mysql:
-        image: mysql:8.0
-        ports:
-          - 3306:3306
-        env:
-          MYSQL_ROOT_PASSWORD: rootroot
-          MYSQL_DATABASE: kanrichan
-          MYSQL_USER: shunuser
-          MYSQL_PASSWORD: mysql0710
-        options: >-
-          --health-cmd="mysqladmin ping --silent"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=3
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -40,10 +24,11 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
           docker-compose --version
 
-      - name: Wait for MySQL to be healthy
+      - name: Build and start MySQL container
         run: |
+          docker-compose -f compose.yaml up -d --build
           for i in {1..30}; do
-            if docker exec mysql mysql -ushunuser -pmysql0710 -e 'select 1'; then
+            if docker-compose -f compose.yaml exec kanri_mysql mysql -h kanri_mysql -ushunuser -pmysql0710 -e 'select 1'; then
               break
             fi
             echo "Waiting for MySQL to be ready... ($i)"
@@ -55,3 +40,6 @@ jobs:
 
       - name: Test with Maven
         run: mvn verify
+
+      - name: Stop MySQL container
+        run: docker-compose -f compose.yaml down
