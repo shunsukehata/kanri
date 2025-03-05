@@ -5,27 +5,29 @@ DOCKER_COMPOSE_PATH="./compose.yaml"
 
 case "$1" in
   start)
-    echo "Starting MySQL container with docker-compose..."
+    echo "既存のMySQLコンテナを停止しています..."
+    docker-compose -f $DOCKER_COMPOSE_PATH down
+    echo "docker-composeでMySQLコンテナを起動しています..."
     docker-compose -f $DOCKER_COMPOSE_PATH up -d
-    echo "Waiting for MySQL to be ready..."
+    echo "MySQLの準備が整うのを待っています..."
     for i in {1..60}; do  # 待機時間を延長
       if docker-compose -f $DOCKER_COMPOSE_PATH exec kanri_mysql mysql -ushunuser -pmysql0710 -e 'select 1'; then
-        echo "MySQL is ready!"
+        echo "MySQLの準備が整いました！"
         exit 0
       fi
-      echo "Waiting for MySQL... ($i)"
+      echo "MySQLの準備を待っています... ($i)"
       sleep 2
     done
-    echo "MySQL failed to start within the timeout period."
+    echo "タイムアウト期間内にMySQLが起動しませんでした。"
     exit 1
     ;;
   stop)
-    echo "Stopping MySQL container with docker-compose..."
+    echo "docker-composeでMySQLコンテナを停止しています..."
     docker-compose -f $DOCKER_COMPOSE_PATH down
-    echo "MySQL container stopped."
+    echo "MySQLコンテナが停止しました。"
     ;;
   build)
-    echo "Building MySQL container with docker-compose..."
+    echo "docker-composeでMySQLコンテナをビルドしています..."
     docker-compose -f $DOCKER_COMPOSE_PATH build
     ;;
   *)
