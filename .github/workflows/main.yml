@@ -1,12 +1,9 @@
 name: Java Maven Test with MySQL
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
-      - main
+      - '**'
 
 jobs:
   verify:
@@ -25,20 +22,17 @@ jobs:
 
       - name: 'Run Docker Compose'
         run: |
-          docker compose -f ./docker-compose.yml up -d --wait
+          docker compose -f ./compose.yaml up -d --wait
 
       - name: 'Show Docker Compose log'
         run: |
-          pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-          cd ./docker
-          docker compose logs
-          popd
+          docker compose -f ./compose.yaml logs
 
       - name: 'Wait for MySQL to be ready'
         run: |
           echo "Waiting for MySQL to be ready..."
           for i in {1..30}; do
-            if mysqladmin ping -h 127.0.0.1 -uroot -prootroot --silent; then
+            if mysqladmin ping -h 127.0.0.1 -ushunuser -pmysql0710 --silent; then
               echo "MySQL is ready!"
               break
             fi
