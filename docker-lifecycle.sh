@@ -9,12 +9,12 @@ case "$1" in
     docker-compose -f $DOCKER_COMPOSE_PATH up -d
     echo "Waiting for MySQL to be ready..."
     for i in {1..60}; do  # 待機時間を延長
-      if docker-compose -f $DOCKER_COMPOSE_PATH exec -T kanri_mysql mysql -h kanri_mysql -ushunuser -pmysql0710 -e 'select 1'; then
+      if docker-compose -f $DOCKER_COMPOSE_PATH exec -T kanri_mysql mysql -h kanri_mysql -ushunuser -pmysql0710 -e'select user()'; then
         echo "MySQL is ready!"
         exit 0
       fi
       echo "Waiting for MySQL... ($i)"
-      sleep 2
+      sleep 5
     done
     echo "MySQL failed to start within the timeout period."
     exit 1
