@@ -1,25 +1,10 @@
 services:
-#  tomcat:
-#    build:
-#      context: .
-#      dockerfile: docker/tomcat/Dockerfile
-#    image: openjdk:11.0.14.1-oracle
-#    expose:
-#      - "8080"
-#    ports:
-#      - "5005:5005" # remote debug
-#    environment:
-#      JAVA_OPTS: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
-#    depends_on:
-#      kanri_mysql:
-#        condition: service_healthy
-
   kanri_mysql:
     image: mysql:8.0
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: rootroot #mandatory for mysql image
+      MYSQL_ROOT_PASSWORD: rootroot
       MYSQL_DATABASE: kanrichan
       MYSQL_USER: shunuser
       MYSQL_PASSWORD: mysql0710
@@ -27,11 +12,14 @@ services:
       - "--default-time-zone=+09:00"
       - "--character-set-server=utf8mb4"
       - "--collation-server=utf8mb4_general_ci"
+      - "--default-authentication-plugin=mysql_native_password"
+
     volumes:
-#      - ./docker/mysql/compose-volumes/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
       - ./docker/mysql/compose-volumes/docker-entrypoint-initdb.d/01_kanri.sql:/docker-entrypoint-initdb.d/01_kanri.sql
       - ./docker/mysql/compose-volumes/docker-entrypoint-initdb.d/02_kanri_data.sql:/docker-entrypoint-initdb.d/02_kanri_data.sql
       - ./docker/mysql/compose-volumes/docker-entrypoint-initdb.d/03_create_user.sql:/docker-entrypoint-initdb.d/03_create_user.sql
       - ./docker/mysql/compose-volumes/etc/mysql/conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
     healthcheck:
       test: mysql -h 127.0.0.1 -ushunuser -pmysql0710 -e'select user();'
+      interval: 15s
+      retries: 15

@@ -24,7 +24,7 @@ public class PgPositionDaoTest {
 
         // 検証
         assertThat(result).hasSize(2); // データが2件存在することを確認
-        assertThat(result.get(0).getPositionName()).isEqualTo("株主");
-        assertThat(result.get(1).getPositionName()).isEqualTo("課長");
+        assertThat(result.get(0).getPositionName()).isEqualTo("課長");
+        assertThat(result.get(1).getPositionName()).isEqualTo("株主");
     }
 }
