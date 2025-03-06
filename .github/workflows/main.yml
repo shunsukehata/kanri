@@ -22,11 +22,11 @@ jobs:
 
       - name: 'Run Docker Compose'
         run: |
-          docker compose -f C:/PJ/kanri/compose.yaml up -d --wait
+          docker compose -f ./compose.yaml up -d --wait
 
       - name: 'Show Docker Compose log'
         run: |
-          docker compose -f C:/PJ/kanri/compose.yaml logs
+          docker compose -f ./compose.yaml logs
 
       - name: 'Wait for MySQL to be ready'
         run: |
