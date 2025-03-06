@@ -20,13 +20,15 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
+      - name: 'Install Docker Compose'
+        run: |
+          sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          sudo chmod +x /usr/local/bin/docker-compose
+          docker-compose --version
+
       - name: 'Run Docker Compose'
         run: |
-          docker compose -f ./compose.yaml up -d --wait
-
-      - name: 'Show Docker Compose log'
-        run: |
-          docker compose -f ./compose.yaml logs
+          ./docker-lifecycle.sh start
 
       - name: 'Wait for MySQL to be ready'
         run: |
@@ -42,3 +44,7 @@ jobs:
 
       - name: Run Maven Verify
         run: mvn verify
+
+      - name: 'Stop Docker Compose'
+        run: |
+          ./docker-lifecycle.sh stop
