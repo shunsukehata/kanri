@@ -118,7 +118,7 @@
 						<configuration>
 							<executable>sh</executable>
 							<arguments>
-								<argument>${basedir}/docker-lifecycle.sh</argument>
+								<executetable>${basedir}/docker-lifecycle.sh</executetable>
 								<argument>start</argument>
 							</arguments>
 						</configuration>
@@ -132,7 +132,7 @@
 						<configuration>
 							<executable>sh</executable>
 							<arguments>
-								<argument>${basedir}/docker-lifecycle.sh</argument>
+								<executetable>${basedir}/docker-lifecycle.sh</executetable>
 								<argument>stop</argument>
 							</arguments>
 						</configuration>
