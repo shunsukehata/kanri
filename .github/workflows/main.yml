@@ -28,6 +28,3 @@ jobs:
 
       - name: Run Maven Verify
         run: mvn verify
-
-      - name: 'Stop Docker Compose'
-        run: ./docker-lifecycle.sh stop
