@@ -26,24 +26,6 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
           docker-compose --version
 
-      - name: 'Make docker-lifecycle.sh executable'
-        run: chmod +x ./docker-lifecycle.sh
-
-      - name: 'Run Docker Compose'
-        run: ./docker-lifecycle.sh start
-
-      - name: 'Wait for MySQL to be ready'
-        run: |
-          echo "Waiting for MySQL to be ready..."
-          for i in {1..30}; do
-            if mysqladmin ping -h 127.0.0.1 -ushunuser -pmysql0710 --silent; then
-              echo "MySQL is ready!"
-              break
-            fi
-            echo "Waiting for MySQL..."
-            sleep 5
-          done
-
       - name: Run Maven Verify
         run: mvn verify
 
